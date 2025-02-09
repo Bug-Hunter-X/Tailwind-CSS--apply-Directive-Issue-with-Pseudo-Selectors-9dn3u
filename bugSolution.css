@@ -1,0 +1,24 @@
+Avoid using `@apply` with classes containing pseudo-selectors. Apply the styles directly to your HTML elements or use JavaScript for dynamic class manipulation.
+
+For example, instead of:
+
+```css
+.btn {
+  @apply bg-blue-500 text-white px-4 py-2 rounded;
+  @apply hover:bg-blue-700;
+}
+```
+
+Use:
+
+```css
+.btn {
+  @apply bg-blue-500 text-white px-4 py-2 rounded;
+}
+
+.btn:hover {
+  @apply bg-blue-700;
+}
+```
+
+Or use JavaScript to add the `bg-blue-700` class on hover.
